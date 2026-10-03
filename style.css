@@ -1,0 +1,165 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar Custom */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.navbar-brand {
+    font-weight: 700;
+    color: #0d6efd !important;
+}
+
+/* Hero Section */
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding-top: 80px;
+}
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.hero-title span {
+    color: #0d6efd;
+}
+
+/* Modifikasi Foto Profil: Bulat Sempurna (Lingkaran) */
+.hero-image {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;          /* Memaksa rasio 1:1 (Kotak) */
+    border-radius: 50%;           /* Mengubah kotak menjadi lingkaran sempurna */
+    object-fit: cover;            /* Menghindari gambar gepeng/melar */
+    object-position: center;      /* Fokus ke bagian tengah foto (wajah) */
+    border: 8px solid #ffffff;    /* Memberikan bingkai putih */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+.hero-image:hover {
+    transform: translateY(-10px);
+}
+
+/* Section Global */
+section {
+    padding: 80px 0;
+}
+.section-title {
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #0d6efd;
+    bottom: -10px;
+    left: 25%;
+}
+
+/* Skills Badges */
+.skill-badge {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 50px;
+    background-color: #fff;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+.skill-badge:hover {
+    background-color: #0d6efd;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* Project Cards */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Gambar Project dengan Gradasi Warna */
+.card-img-top {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+.card:hover .card-img-top {
+    filter: brightness(1.1);
+}
+
+/* Warna Khusus Tiap Project */
+.bg-laravel {
+    background: linear-gradient(135deg, #ff2d20 0%, #ff7b72 100%);
+}
+.bg-flutter {
+    background: linear-gradient(135deg, #02569b 0%, #54c5f8 100%);
+}
+.bg-web {
+    background: linear-gradient(135deg, #f06529 0%, #ffb64d 100%);
+}
+
+.card-img-top i {
+    margin-bottom: 15px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+}
+
+.tech-stack {
+    font-size: 0.8rem;
+    background-color: #e9ecef;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-right: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #495057;
+}
+
+/* Contact Section */
+.contact-btn {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border-radius: 30px;
+    margin: 10px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+.contact-btn i {
+    margin-right: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
